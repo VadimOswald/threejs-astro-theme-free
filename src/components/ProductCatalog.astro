@@ -1,0 +1,25 @@
+---
+import ProductCard from './ProductCard.astro';
+const products = [
+  { id: 'abstract-flow', name: 'Abstract Flow', description: 'A mesmerizing organic sculpture with smooth, flowing curves. Ideal for hero sections, backgrounds, and branding. Full Three.js source code with studio lighting setup included.', price: 19, videoSrc: '/assets/videos/abstract-flow.mp4', posterSrc: '/assets/posters/abstract-flow.jpg' },
+  { id: 'geometric-nexus', name: 'Geometric Nexus', description: 'Sharp angles meet precise symmetry. A futuristic architectural composition. Perfect for tech presentations, sci-fi concepts, and UI backdrops. Full Three.js source code included.', price: 24, videoSrc: '/assets/videos/geometric-nexus.mp4', posterSrc: '/assets/posters/geometric-nexus.jpg' },
+  { id: 'ethereal-glass', name: 'Ethereal Glass', description: 'Light, refraction, and delicate transparency. A refractive glass object with caustics and soft shadows. Rendered for luxury branding, product visualization, and editorial use. Full Three.js source code included.', price: 29, videoSrc: '/assets/videos/ethereal-glass.mp4', posterSrc: '/assets/posters/ethereal-glass.jpg' },
+];
+---
+
+<section class="catalog section" id="catalog">
+  <div class="container">
+    <h2 class="catalog__title anim-reveal">Browse the Catalog</h2>
+    <div class="catalog__grid">
+      {products.map(p => <ProductCard {...p} />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .catalog { background-color: var(--color-white); }
+  .catalog__title { text-align: center; margin-bottom: var(--spacing-3xl); }
+  .catalog__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--grid-gutter); }
+  @media (max-width: 1024px) { .catalog__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { .catalog__grid { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1a1a2e"/>
+  <circle cx="400" cy="300" r="150" fill="none" stroke="#D1F629" stroke-width="2" opacity="0.6"/>
+  <circle cx="350" cy="250" r="80" fill="none" stroke="#24C6D6" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="450" cy="350" r="100" fill="none" stroke="#D1F629" stroke-width="1" opacity="0.3"/>
+  <text x="400" y="560" text-anchor="middle" fill="#7A828A" font-family="Inter, sans-serif" font-size="14">Abstract Flow — 3D Preview</text>
+</svg>

@@ -1,0 +1,32 @@
+---
+---
+
+<footer class="footer" id="footer">
+  <div class="container footer__inner">
+    <p class="footer__copy">&copy; 2026 Metatech. All rights reserved.</p>
+    <div class="footer__links">
+      <a href="https://t.me/web_desigm" target="_blank" rel="noopener" class="footer__link">Telegram</a>
+      <a href="#" class="footer__link">Privacy Policy</a>
+      <a href="#" class="footer__link">Terms of Use</a>
+    </div>
+    <button class="footer__contact" id="open-contact" aria-label="Open contact form">Get in Touch</button>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('open-contact')?.addEventListener('click', () => {
+    window.dispatchEvent(new CustomEvent('open-contact'));
+  });
+</script>
+
+<style>
+  .footer { background-color: var(--color-black); color: var(--color-white); padding: var(--spacing-2xl) 0; }
+  .footer__inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--spacing-lg); }
+  .footer__copy { font-size: var(--text-caption-size); color: var(--color-text-grey); margin: 0; }
+  .footer__links { display: flex; gap: var(--spacing-lg); }
+  .footer__link { font-size: var(--text-caption-size); color: var(--color-text-grey); transition: color 0.2s; }
+  .footer__link:hover { color: var(--color-white); }
+  .footer__contact { padding: 10px 24px; background-color: var(--color-accent); color: var(--color-black); font-weight: var(--font-weight-medium); font-size: var(--text-caption-size); border-radius: var(--radius-pill); transition: opacity 0.2s; }
+  .footer__contact:hover { opacity: 0.9; }
+  @media (max-width: 768px) { .footer__inner { flex-direction: column; text-align: center; } }
+</style>

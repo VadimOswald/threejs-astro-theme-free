@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0f172a"/>
+  <polygon points="400,150 550,350 250,350" fill="none" stroke="#D1F629" stroke-width="2" opacity="0.6"/>
+  <polygon points="400,200 500,320 300,320" fill="none" stroke="#24C6D6" stroke-width="1.5" opacity="0.4"/>
+  <text x="400" y="560" text-anchor="middle" fill="#7A828A" font-family="Inter, sans-serif" font-size="14">Geometric Nexus — 3D Preview</text>
+</svg>

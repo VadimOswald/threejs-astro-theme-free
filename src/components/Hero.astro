@@ -1,0 +1,22 @@
+---
+import HeroScene from './HeroScene';
+---
+
+<section class="hero" id="hero">
+  <HeroScene client:only="preact" />
+  <div class="hero__content container">
+    <h1 class="hero__title anim-fade-up">Premium 3D Assets for Your Next Project</h1>
+    <p class="hero__subtitle anim-fade-up">Three meticulously crafted Three.js scenes — one buyer per asset, no double selling. Browse, order, and own the source code.</p>
+    <a href="#catalog" class="hero__cta anim-fade-up">View Catalog ↓</a>
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; color: var(--color-white); }
+  .hero__content { position: relative; z-index: 1; text-align: center; max-width: 800px; }
+  .hero__title { margin-bottom: var(--spacing-lg); text-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 0 2px 20px rgba(0, 0, 0, 0.6); }
+  .hero__subtitle { font-size: 18px; color: var(--color-text-grey); margin-bottom: var(--spacing-2xl); max-width: 600px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8); }
+  .hero__cta { display: inline-block; padding: 14px 32px; background-color: var(--color-accent); color: var(--color-black); font-weight: var(--font-weight-medium); border-radius: var(--radius-pill); transition: opacity 0.2s, transform 0.2s; }
+  .hero__cta:hover { opacity: 0.9; transform: translateY(-1px); }
+  @media (max-width: 768px) { .hero__subtitle { font-size: 16px; } }
+</style>

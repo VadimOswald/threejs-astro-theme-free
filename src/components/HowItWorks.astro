@@ -1,0 +1,33 @@
+---
+const steps = [
+  { number: '01', title: 'Choose Your Assets', description: 'Browse the catalog and add one, two, or all three scenes to your order.' },
+  { number: '02', title: 'Fill the Form', description: "Enter your name and contact details. We'll use this to send you the download link." },
+  { number: '03', title: 'Download & Create', description: 'Just use it like a common Three.js scene in your project. Or just have it with no publishing. So only you will own it.' },
+];
+---
+
+<section class="hiw section" id="how-it-works">
+  <div class="container">
+    <h2 class="hiw__title anim-reveal">How It Works</h2>
+    <ol class="hiw__list">
+      {steps.map(step => (
+        <li class="hiw__step anim-reveal">
+          <span class="hiw__number">{step.number}</span>
+          <h3 class="hiw__step-title">{step.title}</h3>
+          <p class="hiw__desc">{step.description}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .hiw { background-color: var(--color-off-white); }
+  .hiw__title { text-align: center; margin-bottom: var(--spacing-3xl); }
+  .hiw__list { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--grid-gutter); }
+  .hiw__step { text-align: center; padding: var(--spacing-xl); }
+  .hiw__number { display: block; font-size: 64px; font-weight: var(--font-weight-extrabold); color: var(--color-accent); opacity: 0.4; line-height: 1; margin-bottom: var(--spacing-md); }
+  .hiw__step-title { margin-bottom: var(--spacing-sm); }
+  .hiw__desc { font-size: var(--text-caption-size); color: var(--color-text-grey); }
+  @media (max-width: 768px) { .hiw__list { grid-template-columns: 1fr; } .hiw__number { font-size: 48px; } }
+</style>

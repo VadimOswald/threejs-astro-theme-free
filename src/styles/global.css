@@ -1,0 +1,18 @@
+@import './design-tokens.css';
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: var(--font-primary); font-size: var(--text-body-size); font-weight: var(--font-weight-regular); line-height: 1.5; color: var(--color-black); background-color: var(--color-white); }
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
+h1 { font-size: var(--text-h1-size); line-height: var(--text-h1-line); font-weight: var(--font-weight-extrabold); letter-spacing: var(--letter-spacing-h1); }
+h2 { font-size: var(--text-h2-size); line-height: var(--text-h2-line); font-weight: var(--font-weight-bold); letter-spacing: var(--letter-spacing-h2); }
+h3 { font-size: var(--text-h3-size); line-height: var(--text-h3-line); font-weight: var(--font-weight-semibold); }
+p { margin-bottom: 1em; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+img, video { max-width: 100%; display: block; }
+ul, ol { list-style: none; }
+input, textarea, select { font-family: inherit; font-size: inherit; }
+.container { max-width: var(--container-max); margin: 0 auto; padding: var(--container-padding); }
+.section { padding: var(--section-padding) 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+@media (max-width: 768px) { :root { --text-h1-size: 32px; --text-h1-line: 40px; --text-h2-size: 24px; --text-h2-line: 32px; --section-padding: 60px; } }

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ProductCatalog from '../components/ProductCatalog.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import CartForm from '../components/CartForm';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import Footer from '../components/Footer.astro';
+import ContactPopup from '../components/ContactPopup';
+import PageAnimations from '../components/PageAnimations';
+---
+
+<Layout title="Premium 3D Assets for Your Next Project">
+  <Hero />
+  <ProductCatalog />
+  <HowItWorks />
+  <CartForm client:load />
+  <FaqAccordion />
+  <Footer />
+  <ContactPopup client:load />
+  <PageAnimations client:load />
+</Layout>

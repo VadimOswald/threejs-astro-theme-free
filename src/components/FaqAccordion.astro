@@ -1,0 +1,55 @@
+---
+const faqs = [
+  { q: 'What exactly am I buying?', a: "You're purchasing a Three.js source code. Only one person will own the code. No double selling." },
+  { q: 'How do I receive the files?', a: "After filling out the order form, you'll receive a personal repo link." },
+  { q: 'Can I use these assets commercially?', a: 'Absolutely. All rights are yours.' },
+  { q: 'What if I need help or a custom version?', a: 'Just contact me or mention it in the order message. We offer customization services for an additional fee.' },
+  { q: 'Is online payment required?', a: 'No. We process orders manually. You send a request, we get in touch to confirm and provide payment details. This keeps things simple and secure.' },
+];
+---
+
+<section class="faq section" id="faq">
+  <div class="container">
+    <h2 class="faq__title anim-reveal">Frequently Asked Questions</h2>
+    <div class="faq__list">
+      {faqs.map((f, i) => (
+        <div class="faq__item anim-reveal">
+          <button class="faq__question" aria-expanded="false" aria-controls={`faq-a-${i}`} id={`faq-q-${i}`}>
+            <span>{f.q}</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq__answer" id={`faq-a-${i}`} role="region" aria-labelledby={`faq-q-${i}`}>
+            <p>{f.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq__question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = (btn as HTMLElement).closest('.faq__item')!;
+      const answer = item.querySelector('.faq__answer') as HTMLElement;
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq__question').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        (b.closest('.faq__item')!.querySelector('.faq__answer') as HTMLElement).style.maxHeight = '0';
+      });
+      if (!open) { btn.setAttribute('aria-expanded', 'true'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+    });
+  });
+</script>
+
+<style>
+  .faq { background-color: var(--color-white); }
+  .faq__title { text-align: center; margin-bottom: var(--spacing-3xl); }
+  .faq__list { max-width: 700px; margin: 0 auto; }
+  .faq__item { border-bottom: 1px solid var(--color-light-grey); }
+  .faq__question { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: var(--spacing-lg) 0; font-size: var(--text-body-size); font-weight: var(--font-weight-medium); color: var(--color-black); text-align: left; cursor: pointer; }
+  .faq__icon { flex-shrink: 0; transition: transform 0.3s; color: var(--color-text-grey); }
+  .faq__question[aria-expanded="true"] .faq__icon { transform: rotate(180deg); }
+  .faq__answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq__answer p { padding-bottom: var(--spacing-lg); color: var(--color-text-grey); font-size: var(--text-caption-size); line-height: 1.6; }
+</style>
