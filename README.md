@@ -20,6 +20,7 @@ text
 ├── public/assets/
 │   ├── videos/          # Your MP4 previews go here
 │   └── posters/         # Poster images for video fallback
+│
 ├── src/
 │   ├── components/      # Static Astro components
 │   │   ├── Hero.astro
@@ -28,20 +29,26 @@ text
 │   │   ├── HowItWorks.astro
 │   │   ├── FAQ.astro
 │   │   └── Footer.astro
+│   │
 │   ├── islands/         # Interactive client-side components
 │   │   ├── CartForm.tsx          # Cart + order form (Preact)
 │   │   ├── ContactPopup.tsx      # Modal contact form (Preact + GSAP)
 │   │   ├── PageAnimations.ts     # Scroll animations (GSAP)
 │   │   └── FaqAccordion.ts       # FAQ accordion (Vanilla JS)
+│   │
 │   ├── data/            # All text content — edit these files
 │   │   ├── products.js
 │   │   ├── steps.js
 │   │   └── faqs.js
+│   │
 │   ├── styles/
-│   │   └── design-system.css     # CSS custom properties
+│   │   └── design-system.css    # CSS custom properties
+│   │
 │   └── pages/
-│       └── index.astro           # Main page
+│       └── index.astro          # Main page
+│
 └── astro.config.mjs
+
 Customization
 1. Add your products
 Edit src/data/products.js:
