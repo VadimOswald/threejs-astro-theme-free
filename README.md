@@ -1,4 +1,5 @@
-
+## 3D Assets Store
+## A single-page Astro theme for selling exclusive Three.js scenes. Video previews, cart, order form, manual payment flow. One buyer per asset, no double selling.
 
 ################################################################################
 #                                                                              #
